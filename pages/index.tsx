@@ -31,7 +31,14 @@ const Home: NextPage = () => {
           </Text>
           <Spacer />
           <HStack mt="9" spacing="9">
-            <Button variant="outline">Launch App</Button>
+            <Button
+              variant="outline"
+              as="a"
+              href="https://app.uruz.finance"
+              target="_blank"
+            >
+              Launch App
+            </Button>
             <Badge colorScheme="green">Earn</Badge>
             <Badge colorScheme="red">Borrow</Badge>
             <Badge colorScheme="yellow">Lend</Badge>
