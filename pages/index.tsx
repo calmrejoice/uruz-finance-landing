@@ -5,13 +5,18 @@ import {
   Flex,
   Heading,
   HStack,
+  Image,
   Spacer,
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { useAos } from "@hooks/useAos";
 import Lottie from "lottie-react";
+import { BsShieldFillCheck } from "react-icons/bs";
+import { IoScale } from "react-icons/io5";
+import { GiMeepleGroup } from "react-icons/gi";
+
 import animation from "@assets/animation.json";
+import { FeatureCard } from "@components/FeatureCard";
 
 const Home: NextPage = () => {
   return (
@@ -40,9 +45,28 @@ const Home: NextPage = () => {
       </Flex>
 
       {/* Cards */}
-      <HStack>
-        <Flex></Flex>
+      <HStack spacing="9" my="64">
+        <FeatureCard
+          title="Decentralized"
+          description="Access an immutable money market directly on-chain."
+          icon={GiMeepleGroup}
+          aria="decentralized"
+        />
+        <FeatureCard
+          title="TRC-20"
+          description="All Uruz Protocol assets are bound by the TRC-20 standard."
+          icon={BsShieldFillCheck}
+          aria="trc-20"
+        />
+        <FeatureCard
+          title="Scalable"
+          description="Built on TRON for fast, secure, and low cost transactions."
+          icon={IoScale}
+          aria="scalable"
+        />
       </HStack>
+
+      <Image src="/tron-hackathon-banner.jpg" borderRadius="xl" />
     </Flex>
   );
 };

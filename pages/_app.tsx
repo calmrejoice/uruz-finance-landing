@@ -6,6 +6,7 @@ import theme from "@styles/theme";
 import "@styles/fonts";
 import "@styles/styles.css";
 import { Header } from "@components/Header";
+import { Footer } from "@components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <Footer />
     </ChakraProvider>
   );
 }
