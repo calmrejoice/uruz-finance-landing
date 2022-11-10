@@ -5,15 +5,17 @@ import Head from "next/head";
 import theme from "@styles/theme";
 import "@styles/fonts";
 import "@styles/styles.css";
+import { Header } from "@components/Header";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <Head>
-        <title>My Next JS App</title>
+        <title>Uruz Finance</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <Component {...pageProps} />
     </ChakraProvider>
   );
